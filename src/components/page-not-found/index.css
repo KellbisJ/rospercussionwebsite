@@ -1,0 +1,13 @@
+.notFoundComponent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}
+.notFoundText {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	color: #dc2626;
+}
