@@ -1,4 +1,9 @@
-import { InstagramLogo, YoutubeLogo, SpotifyLogo, Envelope } from '@phosphor-icons/react/ssr';
+import {
+	InstagramLogoIcon,
+	YoutubeLogoIcon,
+	SpotifyLogoIcon,
+	EnvelopeIcon,
+} from '@phosphor-icons/react/ssr';
 
 const SocialMediaSection = (): React.JSX.Element => {
 	return (
@@ -9,53 +14,49 @@ const SocialMediaSection = (): React.JSX.Element => {
 					Join my music community for daily inspiration, free resources, and updates
 				</p>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-					{/* Instagram Card */}
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-2xl mx-auto">
 					<a
-						href="https://instagram.com/johndoe"
+						href="https://instagram.com/example"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group">
 						<div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-							<InstagramLogo weight="fill" size={32} />
+							<InstagramLogoIcon weight="fill" size={32} />
 						</div>
 						<h3 className="text-xl font-semibold mb-2">Instagram</h3>
 						<p className="text-sm opacity-90">Daily tips & behind the scenes</p>
-						<span className="text-xs opacity-75 mt-4 block">@johndoe</span>
+						<span className="text-xs opacity-75 mt-4 block">@example</span>
 					</a>
 
-					{/* YouTube Card */}
 					<a
-						href="https://youtube.com/johndoe"
+						href="https://youtube.com/example"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="bg-red-600 rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group">
 						<div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-							<YoutubeLogo weight="fill" size={32} />
+							<YoutubeLogoIcon weight="fill" size={32} />
 						</div>
 						<h3 className="text-xl font-semibold mb-2">YouTube</h3>
-						<p className="text-sm opacity-90">Free tutorials & lessons</p>
-						<span className="text-xs opacity-75 mt-4 block">John Doe Music</span>
+						<p className="text-sm opacity-90">example</p>
+						<span className="text-xs opacity-75 mt-4 block">example</span>
 					</a>
 
-					{/* Spotify Card */}
 					<a
 						href="https://spotify.com/johndoe"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="bg-green-600 rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group">
 						<div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-							<SpotifyLogo weight="fill" size={32} />
+							<SpotifyLogoIcon weight="fill" size={32} />
 						</div>
 						<h3 className="text-xl font-semibold mb-2">Spotify</h3>
 						<p className="text-sm opacity-90">My music & playlists</p>
-						<span className="text-xs opacity-75 mt-4 block">John Doe</span>
+						<span className="text-xs opacity-75 mt-4 block">example</span>
 					</a>
 
-					{/* Newsletter Card */}
-					<div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
+					{/* <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
 						<div className="bg-blue-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-							<Envelope weight="fill" size={32} className="text-blue-400" />
+							<EnvelopeIcon weight="fill" size={32} className="text-blue-400" />
 						</div>
 						<h3 className="text-xl font-semibold mb-2">Newsletter</h3>
 						<p className="text-sm opacity-90 mb-4">Weekly music insights</p>
@@ -71,7 +72,7 @@ const SocialMediaSection = (): React.JSX.Element => {
 								Subscribe
 							</button>
 						</form>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</section>
