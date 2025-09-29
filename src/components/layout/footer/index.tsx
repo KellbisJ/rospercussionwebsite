@@ -9,7 +9,7 @@ const Footer = (): React.JSX.Element => {
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 					{/* Brand & Description */}
 					<div className="space-y-4">
-						<h3 className="text-2xl font-bold text-blue-400">John Doe Music</h3>
+						<h3 className="text-2xl font-bold text-blue-400">Rosbert Arnaez</h3>
 						<p className="text-slate-300 leading-relaxed">
 							Helping students discover the joy of music through personalized, patient instruction
 							for over a decade.
