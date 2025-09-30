@@ -15,6 +15,7 @@ interface Service {
 	teachingImage?: string;
 	isHorizontal?: boolean;
 	icon?: React.ReactNode;
+	type: string;
 }
 
 const services: Service[] = [
@@ -25,36 +26,42 @@ const services: Service[] = [
 		teachingImage:
 			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114208_020.jpg?updatedAt=1758901557482',
 		icon: <StudentIcon size={32} />,
+		type: 'privateLesson',
 	},
 	{
 		title: 'Group Workshops',
 		description:
 			'Interactive workshops for up to 10 students. Learn collaboratively and build musical community.',
 		icon: <UsersIcon size={32} />,
+		type: 'groupWorkshops',
 	},
 	{
 		title: 'Online Courses',
 		description:
 			'Comprehensive self-paced video lessons accessible anytime, anywhere. Perfect for busy schedules.',
 		icon: <VideoIcon size={32} />,
+		type: 'onlineCourses',
 	},
 	{
 		title: 'Live Performances',
 		description:
 			'Experience professional percussion performances and learn through live demonstration and engagement.',
 		icon: <MicrophoneStageIcon size={32} />,
+		type: 'livePerfomances',
 	},
 	{
 		title: 'Recording Sessions',
 		description:
 			'Professional recording services and rehearsal coaching to perfect your timing and technique.',
 		icon: <FilmSlateIcon size={32} />,
+		type: 'recordingSessions',
 	},
 	{
 		title: 'Master Classes',
 		description:
 			'Advanced instruction from experienced professionals to elevate your skills to the next level.',
 		icon: <ChalkboardTeacherIcon size={32} />,
+		type: 'masterClasses',
 	},
 ];
 

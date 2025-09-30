@@ -3,13 +3,7 @@ import { useEffect, useState } from 'react';
 import { BgPageImage } from '../../specific/bg-page-image';
 import { ArrowRightIcon } from '@phosphor-icons/react/ssr';
 import { useDisplacementToSection } from '@/hooks/use-displacement-section';
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
 const HeroSection = (): React.JSX.Element => {
