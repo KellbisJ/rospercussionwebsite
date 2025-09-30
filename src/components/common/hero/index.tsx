@@ -1,10 +1,21 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { BgPageImage } from '../../specific/bg-page-image';
 import { ArrowRightIcon } from '@phosphor-icons/react/ssr';
 import { useDisplacementToSection } from '@/hooks/use-displacement-section';
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 const HeroSection = (): React.JSX.Element => {
 	const [servicesSection, setServicesSection] = useState<HTMLElement | null>(null);
+
+	const carouselPlugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
 
 	const { displacementToSection } = useDisplacementToSection();
 
@@ -19,10 +30,15 @@ const HeroSection = (): React.JSX.Element => {
 				'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114329_508.jpg?updatedAt=1758901557533',
 			horizontal: false,
 		},
+		// {
+		// 	imgUrl:
+		// 		'https://ik.imagekit.io/137/rportfolio/IMG_20250927_100300_822.jpg?updatedAt=1758982112170',
+		// 	horizontal: false,
+		// },
 		{
 			imgUrl:
-				'https://ik.imagekit.io/137/rportfolio/IMG_20250927_100300_822.jpg?updatedAt=1758982112170',
-			horizontal: false,
+				'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114254_195.jpg?updatedAt=1758901557293',
+			horizontal: true,
 		},
 	];
 
@@ -33,7 +49,7 @@ const HeroSection = (): React.JSX.Element => {
 
 	return (
 		<section id="heroSection" className="min-h-[80vh] flex items-center p-2 m-2 md:mx-40 md:my-8">
-			<div className="max-w-7xl mx-auto w-full">
+			<div className="max-w-[1400px] mx-auto w-full">
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					<div className="space-y-8">
 						<div className="space-y-4">
@@ -43,7 +59,7 @@ const HeroSection = (): React.JSX.Element => {
 							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
 								A{' '}
 								<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-									Repercussionist
+									Percussionist
 								</span>{' '}
 								Teacher
 							</h1>
@@ -72,7 +88,7 @@ const HeroSection = (): React.JSX.Element => {
 					</div>
 
 					{/* Image Grid */}
-					<div className="relative">
+					{/* <div className="relative">
 						<div className="grid grid-cols-2 gap-4 max-w-md mx-auto lg:max-w-none">
 							{heroImagesSection.map((imgData) => (
 								<div
@@ -85,6 +101,27 @@ const HeroSection = (): React.JSX.Element => {
 								</div>
 							))}
 						</div>
+					</div> */}
+
+					<div className="w-full  flex justify-center rounded-2xl">
+						<Carousel
+							plugins={[carouselPlugin.current]}
+							className="w-full max-w-4xl"
+							onMouseEnter={carouselPlugin.current.stop}
+							onMouseLeave={carouselPlugin.current.reset}>
+							<CarouselContent>
+								{heroImagesSection.map((imgData) => (
+									<CarouselItem key={imgData.imgUrl}>
+										<div
+											className={`relative overflow-hidden rounded-2xl transform transition-all duration-500 w-full aspect-video`}>
+											<BgPageImage srcImg={imgData.imgUrl} />
+										</div>
+									</CarouselItem>
+								))}
+							</CarouselContent>
+							{/* <CarouselPrevious />
+							<CarouselNext /> */}
+						</Carousel>
 					</div>
 				</div>
 			</div>

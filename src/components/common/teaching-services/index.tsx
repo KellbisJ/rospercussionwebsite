@@ -1,5 +1,13 @@
 import { BgPageImage } from '@/components/specific/bg-page-image';
-import { StudentIcon, UsersIcon, VideoIcon, ArrowRightIcon } from '@phosphor-icons/react/ssr';
+import {
+	StudentIcon,
+	UsersIcon,
+	VideoIcon,
+	ArrowRightIcon,
+	MicrophoneStageIcon,
+	FilmSlateIcon,
+	ChalkboardTeacherIcon,
+} from '@phosphor-icons/react/ssr';
 
 interface Service {
 	title: string;
@@ -9,23 +17,6 @@ interface Service {
 	icon?: React.ReactNode;
 }
 
-// const services: Service[] = [
-// 	{
-// 		title: 'Private Lessons',
-// 		description: 'One-on-one sessions tailored to your level.',
-// 		teachingImage:
-// 			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114208_020.jpg?updatedAt=1758901557482',
-// 		isHorizontal: false,
-// 	},
-// 	{
-// 		title: 'Group Workshops',
-// 		description: 'Interactive workshops for up to 10 students.',
-// 	},
-// 	{
-// 		title: 'Online Courses',
-// 		description: 'Self-paced video lessons you can access anytime.',
-// 	},
-// ];
 const services: Service[] = [
 	{
 		title: 'Private Lessons',
@@ -44,8 +35,26 @@ const services: Service[] = [
 	{
 		title: 'Online Courses',
 		description:
-			'Self-paced video lessons you can access anytime, anywhere. Perfect for busy schedules.',
+			'Comprehensive self-paced video lessons accessible anytime, anywhere. Perfect for busy schedules.',
 		icon: <VideoIcon size={32} />,
+	},
+	{
+		title: 'Live Performances',
+		description:
+			'Experience professional percussion performances and learn through live demonstration and engagement.',
+		icon: <MicrophoneStageIcon size={32} />,
+	},
+	{
+		title: 'Recording Sessions',
+		description:
+			'Professional recording services and rehearsal coaching to perfect your timing and technique.',
+		icon: <FilmSlateIcon size={32} />,
+	},
+	{
+		title: 'Master Classes',
+		description:
+			'Advanced instruction from experienced professionals to elevate your skills to the next level.',
+		icon: <ChalkboardTeacherIcon size={32} />,
 	},
 ];
 
@@ -60,19 +69,14 @@ const ServicesSection = (): React.JSX.Element => {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
 					{services.map((service) => (
 						<article
 							key={service.title}
-							className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+							className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
 							<div className="flex items-center justify-between mb-6">
 								<div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
 									{service.icon}
-								</div>
-								<div className="flex gap-1">
-									<div className="w-2 h-2 rounded-full bg-red-400"></div>
-									<div className="w-2 h-2 rounded-full bg-yellow-400"></div>
-									<div className="w-2 h-2 rounded-full bg-green-400"></div>
 								</div>
 							</div>
 
@@ -86,7 +90,7 @@ const ServicesSection = (): React.JSX.Element => {
 								</div>
 							)}
 
-							<p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
+							<p className="text-gray-600 leading-relaxed mb-6 flex-grow">{service.description}</p>
 
 							<button className="text-blue-600 font-semibold text-sm flex items-center group-hover:translate-x-2 transition-transform">
 								Learn more

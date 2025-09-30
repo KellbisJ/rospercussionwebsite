@@ -11,17 +11,18 @@ const AboutSection = (): React.JSX.Element => {
 					</p>
 
 					<p>
-						My first piano lesson felt like discovering a new language—one that spoke directly to
-						the soul. That initial spark grew into a lifelong passion that I'm now privileged to
-						share with others.
+						My first experience with the music, was like discover a new language, it helped me,
+						amplying my life's perspective. That spark felt like a big bang inside of me, and it
+						converted into a passion that will maintain all my life, and now, I have the privilege
+						of share this with others.
 					</p>
 
 					{/* Teaching Philosophy */}
 					<div className="bg-slate-700 p-6 rounded-lg mt-6">
 						<h3 className="text-xl font-semibold mb-4">Why I Teach</h3>
 						<p>
-							I believe that anyone can learn how to touch an instrument. The moment a student plays
-							their first melody without looking at the sheet music, that's the magic I live for.
+							I believe that anyone can learn how to touch an instrument, That's the magic I live
+							for.
 						</p>
 					</div>
 
@@ -29,8 +30,9 @@ const AboutSection = (): React.JSX.Element => {
 					<div className="mt-6">
 						<h3 className="text-xl font-semibold mb-4">Beyond the Classroom</h3>
 						<p>
-							When I'm not teaching, you'll find me working as a repercussionist, exploring vintage
-							record stores, or hiking with my guitar, because inspiration can strike anywhere.
+							When I'm not teaching, you'll find me working as a percussionist, giving concerts as
+							percussionist, doing colaborations with other musicians, or exploring this world and
+							knowing people.
 						</p>
 					</div>
 				</div>

@@ -12,7 +12,7 @@ const Footer = (): React.JSX.Element => {
 						<h3 className="text-2xl font-bold text-blue-400">Rosbert Arnaez</h3>
 						<p className="text-slate-300 leading-relaxed">
 							Helping students discover the joy of music through personalized, patient instruction
-							for over a decade.
+							for more than fifteen years.
 						</p>
 					</div>
 

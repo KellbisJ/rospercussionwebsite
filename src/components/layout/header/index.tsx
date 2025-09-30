@@ -1,6 +1,6 @@
 // <span className="bold text-4xl md:text-5xl">Rosbert Arnaez</span>;
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useDisplacementToSection } from '@/hooks/use-displacement-section';
 const Header = (): React.JSX.Element => {
 	const [aboutSectionElement, setAboutSectionElement] = useState<HTMLElement | null>(null);
@@ -16,7 +16,7 @@ const Header = (): React.JSX.Element => {
 		<header className="flex justify-between items-center w-full px-4 py-3 sm:px-6 sm:py-4 lg:px-8 sticky top-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100 text-gray-800">
 			<div className="flex">
 				<span className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl">
-					Rosbert Arnaez
+					RP
 				</span>
 			</div>
 

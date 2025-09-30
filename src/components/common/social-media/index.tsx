@@ -1,9 +1,4 @@
-import {
-	InstagramLogoIcon,
-	YoutubeLogoIcon,
-	SpotifyLogoIcon,
-	EnvelopeIcon,
-} from '@phosphor-icons/react/ssr';
+import { InstagramLogoIcon, YoutubeLogoIcon, SpotifyLogoIcon } from '@phosphor-icons/react/ssr';
 
 const SocialMediaSection = (): React.JSX.Element => {
 	return (
