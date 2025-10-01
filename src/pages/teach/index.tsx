@@ -1,29 +1,15 @@
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { TeachInformationLesson } from '@/components/specific/teach-information-lesson';
+import { isTeachType } from '@/utils/is-teach-type';
+import { TEACH_INFO_DATA } from './teachInformationData';
 
 const TeachPage = (): React.JSX.Element => {
 	const { type } = useParams();
-	const location = useLocation();
 
-	const lessonTypeParam = type as string;
-
-	const expectedTypesUrlParams: string[] = [
-		'privateLesson',
-		'groupWorkshops',
-		'onlineCourses',
-		'livePerfomances',
-		'recordingSessions',
-		'masterClasses',
-	];
-
-	const expectedUrl = expectedTypesUrlParams.some((path) => lessonTypeParam.includes(path));
-
-	console.log(type);
-	console.log(location);
-
-	if (lessonTypeParam && expectedUrl) {
+	if (isTeachType(type)) {
 		return (
 			<>
-				<h2 className="text-red-400">saiodasjfoisf</h2>
+				<TeachInformationLesson teachInfo={TEACH_INFO_DATA} teachType={type} />
 			</>
 		);
 	} else {

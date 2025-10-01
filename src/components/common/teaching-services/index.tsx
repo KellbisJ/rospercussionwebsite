@@ -2,21 +2,14 @@ import { BgPageImage } from '@/components/specific/bg-page-image';
 import {
 	StudentIcon,
 	UsersIcon,
-	VideoIcon,
+	// VideoIcon,
 	ArrowRightIcon,
 	MicrophoneStageIcon,
 	FilmSlateIcon,
 	ChalkboardTeacherIcon,
 } from '@phosphor-icons/react/ssr';
-
-interface Service {
-	title: string;
-	description: string;
-	teachingImage?: string;
-	isHorizontal?: boolean;
-	icon?: React.ReactNode;
-	type: string;
-}
+import { Link } from 'react-router-dom';
+import type { Service } from './types';
 
 const services: Service[] = [
 	{
@@ -35,13 +28,13 @@ const services: Service[] = [
 		icon: <UsersIcon size={32} />,
 		type: 'groupWorkshops',
 	},
-	{
-		title: 'Online Courses',
-		description:
-			'Comprehensive self-paced video lessons accessible anytime, anywhere. Perfect for busy schedules.',
-		icon: <VideoIcon size={32} />,
-		type: 'onlineCourses',
-	},
+	// {
+	// 	title: 'Online Courses',
+	// 	description:
+	// 		'Comprehensive self-paced video lessons accessible anytime, anywhere. Perfect for busy schedules.',
+	// 	icon: <VideoIcon size={32} />,
+	// 	type: 'onlineCourses',
+	// },
 	{
 		title: 'Live Performances',
 		description:
@@ -99,10 +92,12 @@ const ServicesSection = (): React.JSX.Element => {
 
 							<p className="text-gray-600 leading-relaxed mb-6 flex-grow">{service.description}</p>
 
-							<button className="text-blue-600 font-semibold text-sm flex items-center group-hover:translate-x-2 transition-transform">
-								Learn more
-								<ArrowRightIcon size={16} className="ml-1" />
-							</button>
+							<Link to={`/teach/${service.type}`}>
+								<button className="text-blue-600 font-semibold text-sm flex items-center group-hover:translate-x-2 transition-transform cursor-pointer">
+									Learn more
+									<ArrowRightIcon size={16} className="ml-1" />
+								</button>
+							</Link>
 						</article>
 					))}
 				</div>
