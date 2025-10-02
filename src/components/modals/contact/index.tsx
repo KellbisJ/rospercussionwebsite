@@ -33,13 +33,13 @@ const ContactModal = ({
 	const handleEmailClick = () => {
 		const subject = `Booking Inquiry: ${lessonTitle}`;
 		const body = `Hello! I'm interested in booking a session for: ${lessonTitle}. Please provide me with more information about availability and pricing.`;
-		window.location.href = `mailto:your-email@example.com?subject=${encodeURIComponent(
+		window.location.href = `mailto:rospercussion@gmail.com?subject=${encodeURIComponent(
 			subject
 		)}&body=${encodeURIComponent(body)}`;
 	};
 
 	const handleInstagramClick = () => {
-		window.open('https://instagram.com/your-instagram-handle', '_blank');
+		window.open('https://www.instagram.com/ros_percussion', '_blank');
 	};
 
 	return (
@@ -49,7 +49,7 @@ const ContactModal = ({
 			<div className="bg-white rounded-2xl shadow-xl max-w-md w-full relative animate-in fade-in-90 zoom-in-90 duration-200">
 				<button
 					onClick={onClose}
-					className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200">
+					className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 cursor-pointer">
 					<XIcon size={24} />
 				</button>
 
@@ -63,14 +63,14 @@ const ContactModal = ({
 					<div className="space-y-4">
 						<button
 							onClick={handleEmailClick}
-							className="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center space-x-3">
+							className="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center space-x-3 cursor-pointer">
 							<EnvelopeSimpleIcon size={20} />
 							<span>Send Email</span>
 						</button>
 
 						<button
 							onClick={handleInstagramClick}
-							className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors duration-200 flex items-center justify-center space-x-3">
+							className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors duration-200 flex items-center justify-center space-x-3 cursor-pointer">
 							<InstagramLogoIcon size={20} />
 							<span>Send DM on Instagram</span>
 						</button>

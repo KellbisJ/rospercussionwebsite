@@ -1,4 +1,4 @@
-import { CopyrightIcon } from '@phosphor-icons/react/dist/ssr';
+import { CopyrightIcon, EnvelopeIcon, SignpostIcon } from '@phosphor-icons/react/dist/ssr';
 const Footer = (): React.JSX.Element => {
 	const currentYear = new Date().getFullYear();
 
@@ -43,20 +43,23 @@ const Footer = (): React.JSX.Element => {
 						</ul> */}
 					</div>
 
-					{/* Contact Info */}
 					<div className="space-y-4">
 						<h4 className="text-lg font-semibold">Get In Touch</h4>
 						<div className="space-y-2 text-slate-300">
 							<p className="flex items-center">
-								<span className="mr-2">📧</span>
-								example@gmail.com
+								<span className="mr-2">
+									<EnvelopeIcon size={20} color="#fcfcfc" weight="fill" />
+								</span>
+								rospercussion@gmail.com
 							</p>
-							<p className="flex items-center">
+							{/* <p className="flex items-center">
 								<span className="mr-2">📞</span>
 								(555) 123-4567
-							</p>
+							</p> */}
 							<p className="flex items-start">
-								<span className="mr-2">📍</span>
+								<span className="mr-2">
+									<SignpostIcon size={20} color="#fcfcfc" weight="fill" />
+								</span>
 								<span>
 									Australia
 									<br />

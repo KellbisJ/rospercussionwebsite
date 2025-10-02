@@ -1,4 +1,4 @@
-import { InstagramLogoIcon, YoutubeLogoIcon, SpotifyLogoIcon } from '@phosphor-icons/react/ssr';
+// import { InstagramLogoIcon, YoutubeLogoIcon, SpotifyLogoIcon } from '@phosphor-icons/react/ssr';
 
 const SocialMediaSection = (): React.JSX.Element => {
 	return (
@@ -6,24 +6,29 @@ const SocialMediaSection = (): React.JSX.Element => {
 			<div className="max-w-6xl mx-auto text-center">
 				<h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
 				<p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
-					Join my music community for daily inspiration, free resources, and updates
+					Check out my self-taught journey and career, follow me on these platforms.
 				</p>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-2xl mx-auto">
+				{/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-2xl mx-auto"></div> */}
+
+				<div className="grid grid-cols-1 gap-6 max-w-44 mx-auto">
 					<a
-						href="https://instagram.com/example"
+						href="https://www.instagram.com/ros_percussion"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group">
-						<div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-							<InstagramLogoIcon weight="fill" size={32} />
+						className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 hover:scale-105 transition-transform duration-300 group flex flex-col items-center text-center">
+						<div className="w-20 h-20 rounded-full overflow-hidden mb-4 group-hover:scale-110 transition-transform duration-300">
+							<img
+								src="https://ik.imagekit.io/137/rportfolio/IMG-20250926-WA0006.jpg?updatedAt=1758901054244"
+								alt="Profile"
+								className="w-full h-full object-cover"
+							/>
 						</div>
-						<h3 className="text-xl font-semibold mb-2">Instagram</h3>
-						<p className="text-sm opacity-90">Daily tips & behind the scenes</p>
-						<span className="text-xs opacity-75 mt-4 block">@example</span>
+						<h3 className="text-xl font-semibold mb-2">@ros_percussion</h3>
+						<span className="text-xs opacity-75 mt-2 block">Send me a DM on instagram!</span>
 					</a>
 
-					<a
+					{/* <a
 						href="https://youtube.com/example"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -47,7 +52,7 @@ const SocialMediaSection = (): React.JSX.Element => {
 						<h3 className="text-xl font-semibold mb-2">Spotify</h3>
 						<p className="text-sm opacity-90">My music & playlists</p>
 						<span className="text-xs opacity-75 mt-4 block">example</span>
-					</a>
+					</a> */}
 
 					{/* <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
 						<div className="bg-blue-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -6,7 +6,7 @@ import {
 	ArrowRightIcon,
 	MicrophoneStageIcon,
 	FilmSlateIcon,
-	ChalkboardTeacherIcon,
+	// ChalkboardTeacherIcon,
 } from '@phosphor-icons/react/ssr';
 import { Link } from 'react-router-dom';
 import type { Service } from './types';
@@ -27,6 +27,8 @@ const services: Service[] = [
 			'Interactive workshops for up to 10 students. Learn collaboratively and build musical community.',
 		icon: <UsersIcon size={32} />,
 		type: 'groupWorkshops',
+		teachingImage:
+			'https://ik.imagekit.io/137/rportfolio/IMG_20251002_163942_557.jpg?updatedAt=1759437828941',
 	},
 	// {
 	// 	title: 'Online Courses',
@@ -36,11 +38,13 @@ const services: Service[] = [
 	// 	type: 'onlineCourses',
 	// },
 	{
-		title: 'Live Performances',
+		title: 'Live Concert Percussion',
 		description:
-			'Experience professional percussion performances and learn through live demonstration and engagement.',
+			'Elevate your live events with professional percussion services. Available for concerts, festivals, and performances - delivering powerful rhythms and engaging stage presence that transforms musical experiences.',
 		icon: <MicrophoneStageIcon size={32} />,
-		type: 'livePerfomances',
+		type: 'livePerformances',
+		teachingImage:
+			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114307_896.jpg?updatedAt=1758901557671',
 	},
 	{
 		title: 'Recording Sessions',
@@ -49,13 +53,13 @@ const services: Service[] = [
 		icon: <FilmSlateIcon size={32} />,
 		type: 'recordingSessions',
 	},
-	{
-		title: 'Master Classes',
-		description:
-			'Advanced instruction from experienced professionals to elevate your skills to the next level.',
-		icon: <ChalkboardTeacherIcon size={32} />,
-		type: 'masterClasses',
-	},
+	// {
+	// 	title: 'Master Classes',
+	// 	description:
+	// 		'Advanced instruction from experienced professionals to elevate your skills to the next level.',
+	// 	icon: <ChalkboardTeacherIcon size={32} />,
+	// 	type: 'masterClasses',
+	// },
 ];
 
 const ServicesSection = (): React.JSX.Element => {

@@ -1,9 +1,9 @@
 const TeachTypeValues = [
 	'privateLesson',
 	'groupWorkshops',
-	'livePerfomances',
+	'livePerformances',
 	'recordingSessions',
-	'masterClasses',
+	// 'masterClasses',
 ] as const;
 
 type TeachType = (typeof TeachTypeValues)[number];

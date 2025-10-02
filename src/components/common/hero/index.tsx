@@ -34,6 +34,11 @@ const HeroSection = (): React.JSX.Element => {
 				'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114254_195.jpg?updatedAt=1758901557293',
 			horizontal: true,
 		},
+		{
+			imgUrl:
+				'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114307_896.jpg?updatedAt=1758901557671',
+			horizontal: true,
+		},
 	];
 
 	useEffect(() => {

@@ -10,6 +10,7 @@ interface TeachInformationDataInterface {
 	features?: string[];
 	duration?: string;
 	level?: string;
+	videoUrl?: string;
 }
 
 export type { TeachInformationDataInterface };

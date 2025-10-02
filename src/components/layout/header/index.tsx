@@ -1,17 +1,17 @@
 // <span className="bold text-4xl md:text-5xl">Rosbert Arnaez</span>;
 
-import { useState, useEffect } from 'react';
-import { useDisplacementToSection } from '@/hooks/use-displacement-section';
+// import { useState, useEffect } from 'react';
+// import { useDisplacementToSection } from '@/hooks/use-displacement-section';
 import { Link } from 'react-router-dom';
 const Header = (): React.JSX.Element => {
-	const [aboutSectionElement, setAboutSectionElement] = useState<HTMLElement | null>(null);
+	// const [aboutSectionElement, setAboutSectionElement] = useState<HTMLElement | null>(null);
 
-	const { displacementToSection } = useDisplacementToSection();
+	// const { displacementToSection } = useDisplacementToSection();
 
-	useEffect(() => {
-		const aboutSectionHTML = document.getElementById('about');
-		setAboutSectionElement(aboutSectionHTML);
-	}, []);
+	// useEffect(() => {
+	// 	const aboutSectionHTML = document.getElementById('about');
+	// 	setAboutSectionElement(aboutSectionHTML);
+	// }, []);
 
 	return (
 		<header className="flex justify-between items-center w-full px-4 py-3 sm:px-6 sm:py-4 lg:px-8 sticky top-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100 text-gray-800">

@@ -11,19 +11,19 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 		duration: 'X-X minutes',
 		level: 'All Levels',
 		learningOutcomes: [
-			'Master fundamental techniques: grip, posture, stroke control',
+			'Master fundamental techniques: grip, posture. (Fundamentals)',
 			'Customize repertoire to match your musical goals',
 			'Build solid practice routines and self-assessment habits',
 			'Receive on-the-spot feedback for rapid improvement',
 		],
 		features: [
-			'Personalized curriculum',
+			'Personalized classes',
 			'Flexible scheduling',
 			'Progress tracking',
 			'Performance preparation',
 		],
-		imageUrl:
-			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114216_151.jpg?updatedAt=1758901557487',
+		videoUrl:
+			'https://imagekit.io/player/embed/137/rportfolio/VID_20251002_155234_798_bsl.mp4?updatedAt=1759445673280&thumbnail=https%3A%2F%2Fik.imagekit.io%2F137%2Frportfolio%2FVID_20251002_155234_798_bsl.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1759445673280&updatedAt=1759445673280',
 	},
 	{
 		teachType: TeachTypeValues[1], // 'groupWorkshops'
@@ -45,21 +45,22 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 			'Network with musicians',
 			'Cost-effective option',
 		],
-		imageUrl: '/images/group-workshops.jpg',
+		imageUrl:
+			'https://ik.imagekit.io/137/rportfolio/IMG_20251002_163942_557.jpg?updatedAt=1759437828941',
 	},
 	{
 		teachType: TeachTypeValues[2], // 'livePerformances'
-		title: 'Live Performance Sessions',
+		title: 'Live Performance Concerts',
 		subtitle: 'Real Stage Experience',
 		description:
-			'Experience the thrill of live performance in a supportive environment. Learn stage presence, audience connection, and performance psychology.',
+			'Available for hire as percussionist for concerts and live events. Providing professional, engaging performances that add rhythmic complexity and visual excitement to your musical productions.',
 		duration: 'Varies by event',
 		level: 'Intermediate to Advanced',
 		learningOutcomes: [
-			'Observe pro-level stage presence and performance flow',
-			'Learn dynamic playing through live demonstration',
-			'Interact with audience cues and spontaneous improvisation',
-			'Gain tips on set composition and show pacing',
+			'Professional stage presence that elevates your event and captivates audiences',
+			'Dynamic performance energy that transforms ordinary concerts into memorable experiences',
+			'Ensure seamless show flow with expert pacing and set composition',
+			'Polished set composition and pacing for maximum impact and flow',
 		],
 		features: [
 			'Real audience experience',
@@ -67,7 +68,8 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 			'Video recording included',
 			'Post-performance analysis',
 		],
-		imageUrl: '/images/live-performances.jpg',
+		imageUrl:
+			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114307_896.jpg?updatedAt=1758901557671',
 	},
 	{
 		teachType: TeachTypeValues[3], // 'recordingSessions'
@@ -89,30 +91,31 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 			'Take home your recording',
 			'Mixing and mastering basics',
 		],
-		imageUrl: '/images/recording-sessions.jpg',
+		videoUrl:
+			'https://imagekit.io/player/embed/137/rportfolio/VID_20250927_100233_574.mp4?updatedAt=1758982052831&thumbnail=https%3A%2F%2Fik.imagekit.io%2F137%2Frportfolio%2FVID_20250927_100233_574.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1758982052831&updatedAt=1758982052831',
 	},
-	{
-		teachType: TeachTypeValues[4], // 'masterClasses'
-		title: 'Master Classes',
-		subtitle: 'Learn from Industry Professionals',
-		description:
-			'Intensive sessions with accomplished musicians and educators. Gain insights into advanced techniques, career development, and artistic expression.',
-		duration: 'X-X hours',
-		level: 'Advanced',
-		learningOutcomes: [
-			'Deep-dive into advanced repertoire and stylistic nuance',
-			'Receive personalized critiques from industry pros',
-			'Explore niche genres and innovative techniques',
-			'Network and get career-level guidance',
-		],
-		features: [
-			'Industry expert instructors',
-			'Limited class size',
-			'Certificate of completion',
-			'Networking opportunities',
-		],
-		imageUrl: '/images/master-classes.jpg',
-	},
+	// {
+	// 	teachType: TeachTypeValues[4], // 'masterClasses'
+	// 	title: 'Master Classes',
+	// 	subtitle: 'Learn from Industry Professionals',
+	// 	description:
+	// 		'Intensive sessions with accomplished musicians and educators. Gain insights into advanced techniques, career development, and artistic expression.',
+	// 	duration: 'X-X hours',
+	// 	level: 'Advanced',
+	// 	learningOutcomes: [
+	// 		'Deep-dive into advanced repertoire and stylistic nuance',
+	// 		'Receive personalized critiques from industry pros',
+	// 		'Explore niche genres and innovative techniques',
+	// 		'Network and get career-level guidance',
+	// 	],
+	// 	features: [
+	// 		'Industry expert instructors',
+	// 		'Limited class size',
+	// 		'Certificate of completion',
+	// 		'Networking opportunities',
+	// 	],
+	// 	imageUrl: '/images/master-classes.jpg',
+	// },
 ];
 
 export { TEACH_INFO_DATA };

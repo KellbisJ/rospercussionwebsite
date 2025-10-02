@@ -46,8 +46,10 @@ const TeachInformationLesson = ({
 			</div>
 
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+				{/* Left Column - Content Sections */}
 				<div className="space-y-8">
-					<div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+					{/* Session Details */}
+					<div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
 						<h3 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
 							Session Details
 						</h3>
@@ -81,7 +83,8 @@ const TeachInformationLesson = ({
 						</div>
 					</div>
 
-					<div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+					{/* Learning Outcomes */}
+					<div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
 						<h3 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
 							What You'll Master
 						</h3>
@@ -97,8 +100,9 @@ const TeachInformationLesson = ({
 						</ul>
 					</div>
 
+					{/* Features */}
 					{lessonData.features && (
-						<div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+						<div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
 							<h3 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
 								What's Included
 							</h3>
@@ -106,7 +110,7 @@ const TeachInformationLesson = ({
 								{lessonData.features.map((feature, index) => (
 									<div
 										key={index}
-										className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+										className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg border border-gray-100">
 										<div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
 											<span className="text-blue-600">
 												<SparkleIcon color="#ebe40f" />
@@ -120,52 +124,65 @@ const TeachInformationLesson = ({
 					)}
 				</div>
 
-				<div className="sticky top-8">
-					<div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-						{lessonData.imageUrl && (
-							<img
-								src={lessonData.imageUrl}
-								alt={lessonData.title}
-								className="w-full h-64 md:h-80 object-contain aspect-square"
-							/>
-						)}
+				<div className="space-y-6">
+					<div className="sticky top-8 bg-white rounded-2xl shadow-lg overflow-hidden">
+						<div className="aspect-video overflow-hidden">
+							{!lessonData.videoUrl && lessonData.imageUrl && (
+								<img
+									src={lessonData.imageUrl}
+									alt={lessonData.title}
+									className="w-full h-full object-cover"
+								/>
+							)}
+							{!lessonData.imageUrl && lessonData.videoUrl && (
+								<iframe
+									className="w-full h-full"
+									src={lessonData.videoUrl}
+									title="Recording Studio Sessions video player"
+									frameBorder="0"
+									allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									allowFullScreen
+								/>
+							)}
+						</div>
 
-						<div className="p-6 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+						<div className="p-6 bg-gradient-to-r from-indigo-600 to-purple-700 text-white border-t border-indigo-500">
 							<h4 className="text-xl font-bold mb-2">Ready to Begin?</h4>
 							<p className="text-indigo-100 mb-4">
 								Start your musical transformation with personalized guidance and expert instruction.
 							</p>
 							<button
 								onClick={handleBookSessionClick}
-								className="w-full bg-white text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+								className="w-full bg-white text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer border border-white hover:border-gray-200">
 								Book Your Session
 							</button>
 						</div>
 					</div>
 
-					<div className="mt-6 bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+					<div className="bg-white rounded-2xl shadow-lg p-6">
 						<h4 className="text-lg font-bold text-gray-900 mb-3">Why Choose This Path?</h4>
 						<p className="text-gray-600 mb-4">
 							Each session is crafted to provide maximum value, combining technical expertise with
 							artistic development in a supportive learning environment.
 						</p>
-						<div className="flex items-center space-x-2 text-gray-500">
-							<span>
+						<div className="space-y-2">
+							<div className="flex items-center space-x-2 text-gray-500">
 								<CheckCircleIcon color="#18e24a" size={18} />
-							</span>
-							<span>Personalized attention</span>
-						</div>
-						<div className="flex items-center space-x-2 text-gray-500 mt-2">
-							<CheckCircleIcon color="#18e24a" size={18} />
-							<span>Professional guidance</span>
-						</div>
-						<div className="flex items-center space-x-2 text-gray-500 mt-2">
-							<CheckCircleIcon color="#18e24a" size={18} />
-							<span>Proven results</span>
+								<span>Personalized attention</span>
+							</div>
+							<div className="flex items-center space-x-2 text-gray-500">
+								<CheckCircleIcon color="#18e24a" size={18} />
+								<span>Professional guidance</span>
+							</div>
+							<div className="flex items-center space-x-2 text-gray-500">
+								<CheckCircleIcon color="#18e24a" size={18} />
+								<span>Proven results</span>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 			<ContactModal
 				isOpen={isModalOpen}
 				onClose={handleCloseModal}
