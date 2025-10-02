@@ -1,4 +1,4 @@
-// TeachInformationLesson.tsx
+import { useState } from 'react';
 import type { TeachType } from '@/components/common/teaching-services/types';
 import type { TeachInformationDataInterface } from '@/pages/teach/types';
 import {
@@ -7,6 +7,7 @@ import {
 	SparkleIcon,
 	TimerIcon,
 } from '@phosphor-icons/react/dist/ssr';
+import { ContactModal } from '@/components/modals/contact';
 
 const TeachInformationLesson = ({
 	teachInfo,
@@ -15,6 +16,7 @@ const TeachInformationLesson = ({
 	teachInfo: TeachInformationDataInterface[];
 	teachType: TeachType;
 }) => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 	const lessonData = teachInfo.find((item) => item.teachType === teachType);
 
 	if (!lessonData) {
@@ -25,8 +27,16 @@ const TeachInformationLesson = ({
 		);
 	}
 
+	const handleBookSessionClick = () => {
+		setIsModalOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+	};
+
 	return (
-		<div className="container mx-auto px-4 py-8">
+		<div className="container mx-auto px-4 py-8 my-12">
 			<div className="text-center mb-12">
 				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{lessonData.title}</h1>
 				{lessonData.subtitle && (
@@ -125,7 +135,9 @@ const TeachInformationLesson = ({
 							<p className="text-indigo-100 mb-4">
 								Start your musical transformation with personalized guidance and expert instruction.
 							</p>
-							<button className="w-full bg-white text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+							<button
+								onClick={handleBookSessionClick}
+								className="w-full bg-white text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200">
 								Book Your Session
 							</button>
 						</div>
@@ -154,6 +166,11 @@ const TeachInformationLesson = ({
 					</div>
 				</div>
 			</div>
+			<ContactModal
+				isOpen={isModalOpen}
+				onClose={handleCloseModal}
+				lessonTitle={lessonData.title}
+			/>
 		</div>
 	);
 };

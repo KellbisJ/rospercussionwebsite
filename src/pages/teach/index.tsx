@@ -6,6 +6,8 @@ import { TEACH_INFO_DATA } from './teachInformationData';
 const TeachPage = (): React.JSX.Element => {
 	const { type } = useParams();
 
+	window.scroll({ top: 0 });
+
 	if (isTeachType(type)) {
 		return (
 			<>

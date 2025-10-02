@@ -36,9 +36,6 @@ const Header = (): React.JSX.Element => {
 
 				<a
 					href="#about"
-					onClick={(e) => {
-						displacementToSection(e, aboutSectionElement);
-					}}
 					className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 px-2 py-1 sm:px-3 sm:py-2 sm:text-base rounded-md hover:bg-gray-50 border border-transparent hover:border-gray-200">
 					About
 				</a>
