@@ -52,15 +52,14 @@ const HeroSection = (): React.JSX.Element => {
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					<div className="space-y-8">
 						<div className="space-y-4">
-							<span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
-								Music Educator
+							<span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-lg text-sm font-medium mb-4">
+								Percussionist, Music Educator
 							</span>
-							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-								A{' '}
+							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+								Percussionist &{' '}
 								<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-									Percussionist
+									Percussionist Teacher
 								</span>{' '}
-								Teacher
 							</h1>
 							<p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
 								Transforming musical passion into skill through personalized lessons that resonate

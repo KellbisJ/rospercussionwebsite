@@ -1,4 +1,4 @@
-import { BgPageImage } from '@/components/specific/bg-page-image';
+// import { BgPageImage } from '@/components/specific/bg-page-image';
 import {
 	StudentIcon,
 	UsersIcon,
@@ -6,6 +6,9 @@ import {
 	ArrowRightIcon,
 	MicrophoneStageIcon,
 	FilmSlateIcon,
+	MusicNoteIcon,
+	SignpostIcon,
+	GlobeIcon,
 	// ChalkboardTeacherIcon,
 } from '@phosphor-icons/react/ssr';
 import { Link } from 'react-router-dom';
@@ -52,6 +55,8 @@ const services: Service[] = [
 			'Professional recording services and rehearsal coaching to perfect your timing and technique.',
 		icon: <FilmSlateIcon size={32} />,
 		type: 'recordingSessions',
+		teachingImage:
+			'https://ik.imagekit.io/137/rportfolio/IMG-20251004-WA0010.jpg?updatedAt=1759589603016',
 	},
 	// {
 	// 	title: 'Master Classes',
@@ -66,11 +71,34 @@ const ServicesSection = (): React.JSX.Element => {
 	return (
 		<section id="servicesSection" className="py-20 p-2 m-2 md:mx-40 md:my-8">
 			<div className="max-w-7xl mx-auto">
-				<div className="text-center mb-16">
+				<div className="flex flex-col justify-center items-center  text-center mb-16">
 					<h2 className="text-4xl font-bold text-gray-900 mb-4">What I Offer</h2>
-					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-						Comprehensive music education designed to inspire and challenge students at every level
-					</p>
+
+					<div className="space-y-2 text-lg text-start md:text-center">
+						<div className="flex items-start md:items-center gap-2">
+							<MusicNoteIcon className="min-w-6" color="#6f1c9b" weight="fill" />
+							<p className="text-gray-600">
+								Comprehensive music education designed to inspire and challenge students at every
+								level.
+							</p>
+						</div>
+
+						<div className="flex items-start md:items-center gap-2">
+							<SignpostIcon className="min-w-6" color="#db1a1a" weight="fill" />
+							<p className="text-gray-600">
+								Based in Perth, Western Australia, I offer in-person classes and events throughout
+								the region.
+							</p>
+						</div>
+
+						<div className="flex items-start md:items-center gap-2">
+							<GlobeIcon className="min-w-6 text-blue-600" weight="duotone" />
+							<p className="text-gray-600">
+								For those outside this area, I also provide engaging online lessons tailored to your
+								needs.
+							</p>
+						</div>
+					</div>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
@@ -90,7 +118,12 @@ const ServicesSection = (): React.JSX.Element => {
 
 							{service.teachingImage && (
 								<div className="w-full h-48 rounded-xl overflow-hidden mb-4">
-									<BgPageImage srcImg={service.teachingImage} />
+									<img
+										src={service.teachingImage}
+										alt="teaching samples"
+										className="w-full h-full object-cover"
+										loading="lazy"
+									/>
 								</div>
 							)}
 

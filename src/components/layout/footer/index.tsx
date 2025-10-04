@@ -63,7 +63,7 @@ const Footer = (): React.JSX.Element => {
 								<span>
 									Australia
 									<br />
-									Perth, Australia Example
+									Western Australia, Perth
 								</span>
 							</p>
 						</div>

@@ -68,8 +68,8 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 			'Video recording included',
 			'Post-performance analysis',
 		],
-		imageUrl:
-			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114307_896.jpg?updatedAt=1758901557671',
+		videoUrl:
+			'https://imagekit.io/player/embed/137/rportfolio/VID_20251004_080557_701_bsl.mp4?updatedAt=1759590477899&thumbnail=https%3A%2F%2Fik.imagekit.io%2F137%2Frportfolio%2FVID_20251004_080557_701_bsl.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1759590477899&updatedAt=1759590477899',
 	},
 	{
 		teachType: TeachTypeValues[3], // 'recordingSessions'
