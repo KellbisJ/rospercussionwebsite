@@ -31,7 +31,7 @@ const services: Service[] = [
 		icon: <UsersIcon size={32} />,
 		type: 'groupWorkshops',
 		teachingImage:
-			'https://ik.imagekit.io/137/rportfolio/IMG_20251002_163942_557.jpg?updatedAt=1759437828941',
+			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114316_048.jpg?updatedAt=1758901557478',
 	},
 	// {
 	// 	title: 'Online Courses',
