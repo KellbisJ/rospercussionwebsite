@@ -101,7 +101,7 @@ const HeroSection = (): React.JSX.Element => {
 						</div>
 					</div> */}
 
-					<div className="w-full  flex justify-center rounded-2xl">
+					<div className="w-full  flex justify-center rounded-2xl filter drop-shadow-[0_6px_12px_rgba(6,182,212,0.30),0_0_18px_rgba(139,92,246,0.65)]">
 						<Carousel
 							plugins={[carouselPlugin.current]}
 							className="w-full max-w-4xl"
