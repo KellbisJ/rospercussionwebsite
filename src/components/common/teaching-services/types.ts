@@ -16,6 +16,12 @@ interface Service {
 	icon?: React.ReactNode;
 	type: TeachType;
 }
+interface ProductsExample {
+	title: string;
+	description: string;
+	productImage: string;
+	cost: number;
+}
 
-export type { TeachType, Service };
+export type { TeachType, Service, ProductsExample };
 export { TeachTypeValues };

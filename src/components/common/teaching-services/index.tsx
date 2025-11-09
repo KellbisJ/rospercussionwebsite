@@ -69,7 +69,7 @@ const services: Service[] = [
 
 const ServicesSection = (): React.JSX.Element => {
 	return (
-		<section id="servicesSection" className="py-20 p-2 m-2 md:mx-40 md:my-8">
+		<section id="servicesSection" className="p-2 m-2 my-8 md:mx-40 ">
 			<div className="max-w-7xl mx-auto">
 				<div className="flex flex-col justify-center items-center  text-center mb-16">
 					<h2 className="text-4xl font-bold text-gray-900 mb-4">What I Offer</h2>
@@ -101,11 +101,11 @@ const ServicesSection = (): React.JSX.Element => {
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr">
 					{services.map((service) => (
 						<article
 							key={service.title}
-							className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
+							className="group bg-white rounded-[10px] p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
 							<div className="flex items-center justify-between mb-6">
 								<div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
 									{service.icon}
