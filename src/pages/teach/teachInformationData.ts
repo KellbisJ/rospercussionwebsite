@@ -8,7 +8,7 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 		subtitle: 'Personalized One-on-One Instruction',
 		description:
 			'Tailored sessions designed specifically for your musical journey. Get undivided attention and customized guidance to accelerate your growth.',
-		duration: 'X-X minutes',
+		duration: '1-2 hours',
 		level: 'All Levels',
 		learningOutcomes: [
 			'Master fundamental techniques: grip, posture. (Fundamentals)',
@@ -31,7 +31,7 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 		subtitle: 'Collaborative Learning Experience',
 		description:
 			'Join fellow musicians in dynamic group settings where collaboration fuels growth. Perfect for developing ensemble skills and building musical community.',
-		duration: 'X-X hours',
+		duration: '2-4 hours',
 		level: 'Beginner to Intermediate',
 		learningOutcomes: [
 			'Develop ensemble skills: listening, blending, and timing',
@@ -46,7 +46,7 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 			'Cost-effective option',
 		],
 		imageUrl:
-			'https://ik.imagekit.io/137/rportfolio/IMG_20251002_163942_557.jpg?updatedAt=1759437828941',
+			'https://ik.imagekit.io/137/rportfolio/IMG_20250926_114316_048.jpg?updatedAt=1758901557478',
 	},
 	{
 		teachType: TeachTypeValues[2], // 'livePerformances'
@@ -77,7 +77,7 @@ const TEACH_INFO_DATA: TeachInformationDataInterface[] = [
 		subtitle: 'Professional Studio Experience',
 		description:
 			'Step into the world of professional recording. Learn studio etiquette, microphone techniques, and the art of creating perfect takes.',
-		duration: 'X-X hours',
+		duration: '1-4 hours',
 		level: 'Intermediate to Advanced',
 		learningOutcomes: [
 			'Understand microphone techniques and placement',
