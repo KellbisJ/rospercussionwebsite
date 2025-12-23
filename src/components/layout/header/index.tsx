@@ -10,19 +10,19 @@ const Header = (): React.JSX.Element => {
 
 	return (
 		// <header className="flex justify-between items-center w-full px-4 py-3 sm:px-6 sm:py-4 lg:px-8 sticky top-0 backdrop-blur-sm z-50 text-gray-800 animate-christmas">
-		<header className="flex justify-between items-center w-full px-4 py-3 sm:px-6 sm:py-4 lg:px-8 sticky top-0 backdrop-blur-sm z-50 text-gray-800 bg-gray-50">
+		<header className="flex justify-between items-center w-full px-4 py-3 sm:px-6 sm:py-4 lg:px-8 sticky top-0 backdrop-blur-sm z-50 text-gray-800 bg-gray-50 christmas-lights">
 			<div className="flex">
-				{/* <Link to={'/home'}>
+				<Link to={'/home'}>
 					<span className="drop-shadow-sm text-xl font-bold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl text-gray-50">
 						RP
 					</span>
-				</Link> */}
+				</Link>
 
-				<Link to={'/home'}>
+				{/* <Link to={'/home'}>
 					<span className="drop-shadow-sm text-xl font-bold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl">
 						RP
 					</span>
-				</Link>
+				</Link> */}
 			</div>
 
 			<nav className="flex items-center gap-4 sm:gap-6">

@@ -150,25 +150,18 @@ body {
 	--animate-christmas: christmasLightsEffect 10s ease-in-out infinite;
 }
 
-@keyframes christmasLightsEffect {
+@keyframes christmasLights {
 	0% {
-		background: linear-gradient(to right, #dc2626, #16a34a);
-		box-shadow: 0 0 12px #dc2626, 0 0 24px #16a34a;
-	}
-	25% {
-		background: linear-gradient(to right, #16a34a, #2563eb);
-		box-shadow: 0 0 12px #16a34a, 0 0 24px #2563eb;
+		background: linear-gradient(to right, #ff0e0e, #01a801, #fff707);
 	}
 	50% {
-		background: linear-gradient(to right, #2563eb, #facc15);
-		box-shadow: 0 0 12px #2563eb, 0 0 24px #facc15;
-	}
-	75% {
-		background: linear-gradient(to right, #facc15, #dc2626);
-		box-shadow: 0 0 12px #facc15, 0 0 24px #dc2626;
+		background: linear-gradient(to right, #0aa8f1, #aa06aa, #03e9e9);
 	}
 	100% {
-		background: linear-gradient(to right, #dc2626, #16a34a);
-		box-shadow: 0 0 12px #dc2626, 0 0 24px #16a34a;
+		background: linear-gradient(to right, #ff0e0e, #01a801, #fff707);
 	}
+}
+
+.christmas-lights {
+	animation: christmasLights 4.5s linear infinite;
 }
