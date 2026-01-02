@@ -149,19 +149,3 @@ body {
 @theme {
 	--animate-christmas: christmasLightsEffect 10s ease-in-out infinite;
 }
-
-@keyframes christmasLights {
-	0% {
-		background: linear-gradient(to right, #ff0e0e, #01a801, #fff707);
-	}
-	50% {
-		background: linear-gradient(to right, #0aa8f1, #aa06aa, #03e9e9);
-	}
-	100% {
-		background: linear-gradient(to right, #ff0e0e, #01a801, #fff707);
-	}
-}
-
-.christmas-lights {
-	animation: christmasLights 4.5s linear infinite;
-}
