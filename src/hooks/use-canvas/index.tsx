@@ -41,19 +41,17 @@ const useCanvas = (): UseCanvasReturn => {
 		const canvas = canvasRef.current;
 		if (!canvas) return;
 
-		const parent = canvas.parentElement || document.body;
-
 		canvas.style.position = 'fixed';
 		canvas.style.width = '100%';
 		canvas.style.height = '100%';
 		canvas.style.zIndex = '1';
 
-		canvas.width = parent.clientWidth;
-		canvas.height = parent.clientHeight;
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
 
 		const dpr = window.devicePixelRatio || 1;
-		canvas.width = parent.clientWidth * dpr;
-		canvas.height = parent.clientHeight * dpr;
+		canvas.width = window.innerWidth * dpr;
+		canvas.height = window.innerHeight * dpr;
 
 		const ctx = canvas.getContext('2d');
 		if (ctx) {
