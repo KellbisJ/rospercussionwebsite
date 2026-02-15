@@ -3,13 +3,13 @@ const Footer = (): React.JSX.Element => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="bg-slate-900 text-white py-16 px-4">
+		<footer className="bg-gray-800 text-white py-16 px-4">
 			<div className="max-w-6xl mx-auto">
 				{/* Main Footer Content */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 					{/* Brand & Description */}
 					<div className="space-y-4">
-						<h3 className="text-2xl font-bold text-blue-400">Rosbert Arnaez</h3>
+						<h3 className="text-2xl font-bold text-[#2845D6]">Rosbert Arnaez</h3>
 						<p className="text-slate-300 leading-relaxed">
 							Helping students discover the joy of music through personalized, patient instruction
 							for more than fifteen years.

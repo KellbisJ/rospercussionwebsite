@@ -47,21 +47,23 @@ const HeroSection = (): React.JSX.Element => {
 	}, []);
 
 	return (
-		<section id="heroSection" className="min-h-[80vh] flex items-center p-2 m-2 md:mx-40 md:my-8">
-			<div className="max-w-[1400px] mx-auto w-full">
+		<section
+			id="heroSection"
+			className="min-h-[80vh] flex items-center px-2 mx-2 py-8 my-8 md:mx-40 md:my-8">
+			<div className="max-w-350 mx-auto w-full">
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					<div className="space-y-8">
 						<div className="space-y-4">
-							<span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-lg text-sm font-medium mb-4">
+							<span className="inline-block px-4 py-2 bg-gray-800 text-gray-50 rounded-lg mb-4">
 								Percussionist, Music Educator
 							</span>
-							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-50 text-shadow-2xs leading-tight">
 								Percussionist &{' '}
-								<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+								<span className="text-transparent bg-clip-text text-shadow-2xs bg-linear-to-r from-gray-50 to-purple-700">
 									Percussionist Teacher
 								</span>{' '}
 							</h1>
-							<p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+							<p className="text-xl text-gray-50 text-shadow-sm leading-relaxed max-w-2xl">
 								Transforming musical passion into skill through personalized lessons that resonate
 								with every student's unique rhythm.
 							</p>
@@ -72,7 +74,7 @@ const HeroSection = (): React.JSX.Element => {
 								onClick={(e) => {
 									displacementToSection(e, servicesSection);
 								}}
-								className="group inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer">
+								className="group inline-flex items-center justify-center px-8 py-4 bg-purple-700 hover:bg-purple-800 text-gray-50 rounded-lg transition-all duration-300 transform cursor-pointer">
 								Start Your Journey
 								<ArrowRightIcon
 									className="ml-2 group-hover:translate-x-1 transition-transform"
@@ -101,12 +103,8 @@ const HeroSection = (): React.JSX.Element => {
 						</div>
 					</div> */}
 
-					<div className="w-full  flex justify-center rounded-2xl filter drop-shadow-[0_6px_12px_rgba(6,182,212,0.30),0_0_18px_rgba(139,92,246,0.65)]">
-						<Carousel
-							plugins={[carouselPlugin.current]}
-							className="w-full max-w-4xl"
-							onMouseEnter={carouselPlugin.current.stop}
-							onMouseLeave={carouselPlugin.current.reset}>
+					<div className="w-full  flex justify-center rounded-2xl drop-shadow-sm">
+						<Carousel plugins={[carouselPlugin.current]} className="w-full max-w-4xl">
 							<CarouselContent>
 								{heroImagesSection.map((imgData) => (
 									<CarouselItem key={imgData.imgUrl}>

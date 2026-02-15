@@ -3,11 +3,11 @@ import { Footer } from './footer';
 import { Outlet } from 'react-router-dom';
 // import { GridPattern } from '../ui/shadcn-io/grid-pattern';
 // import { cn } from '@/lib/utils';
-import { useWindowSize } from '@/hooks/use-window-size';
+// import { useWindowSize } from '@/hooks/use-window-size';
 import { Background } from '../ui/background';
 
 const Layout = (): React.JSX.Element => {
-	const { isMobile } = useWindowSize();
+	// const { isMobile } = useWindowSize();
 	return (
 		<>
 			<Background />

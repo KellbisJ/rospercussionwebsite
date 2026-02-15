@@ -72,12 +72,12 @@ const ServicesSection = (): React.JSX.Element => {
 		<section id="servicesSection" className="p-2 m-2 my-8 md:mx-40 ">
 			<div className="max-w-7xl mx-auto">
 				<div className="flex flex-col justify-center items-center  text-center mb-16">
-					<h2 className="text-4xl font-bold text-gray-900 mb-4">What I Offer</h2>
+					<h2 className="text-4xl font-bold text-gray-50 text-shadow-2xs mb-4">What I Offer</h2>
 
-					<div className="space-y-2 text-lg text-start md:text-center">
+					<div className="space-y-2 text-lg text-start md:text-center text-gray-50">
 						<div className="flex items-start md:items-center gap-2">
 							<MusicNoteIcon className="min-w-6" color="#6f1c9b" weight="fill" />
-							<p className="text-gray-600">
+							<p>
 								Comprehensive music education designed to inspire and challenge students at every
 								level.
 							</p>
@@ -85,7 +85,7 @@ const ServicesSection = (): React.JSX.Element => {
 
 						<div className="flex items-start md:items-center gap-2">
 							<SignpostIcon className="min-w-6" color="#db1a1a" weight="fill" />
-							<p className="text-gray-600">
+							<p>
 								Based in Perth, Western Australia, I offer in-person classes and events throughout
 								the region.
 							</p>
@@ -93,7 +93,7 @@ const ServicesSection = (): React.JSX.Element => {
 
 						<div className="flex items-start md:items-center gap-2">
 							<GlobeIcon className="min-w-6 text-blue-600" weight="duotone" />
-							<p className="text-gray-600">
+							<p>
 								For those outside this area, I also provide engaging online lessons tailored to your
 								needs.
 							</p>
@@ -105,16 +105,14 @@ const ServicesSection = (): React.JSX.Element => {
 					{services.map((service) => (
 						<article
 							key={service.title}
-							className="group bg-white rounded-[10px] p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
+							className="group bg-gray-800 rounded-[10px] p-8 shadow-lg transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col">
 							<div className="flex items-center justify-between mb-6">
-								<div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+								<div className="w-12 h-12 bg-linear-to-br from-[#2845D6] to-purple-700 rounded-xl flex items-center justify-center text-gray-50">
 									{service.icon}
 								</div>
 							</div>
 
-							<h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-								{service.title}
-							</h3>
+							<h3 className="text-2xl font-bold text-gray-50 mb-4">{service.title}</h3>
 
 							{service.teachingImage && (
 								<div className="w-full h-48 rounded-xl overflow-hidden mb-4">
@@ -127,10 +125,10 @@ const ServicesSection = (): React.JSX.Element => {
 								</div>
 							)}
 
-							<p className="text-gray-600 leading-relaxed mb-6 flex-grow">{service.description}</p>
+							<p className="text-gray-50 leading-relaxed mb-6 grow">{service.description}</p>
 
 							<Link to={`/teach/${service.type}`}>
-								<button className="text-blue-600 font-semibold text-sm flex items-center group-hover:translate-x-2 transition-transform cursor-pointer">
+								<button className="text-purple-700 font-bold text-sm flex items-center cursor-pointer">
 									Learn more
 									<ArrowRightIcon size={16} className="ml-1" />
 								</button>

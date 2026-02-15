@@ -1,8 +1,8 @@
 const AboutSection = (): React.JSX.Element => {
 	return (
-		<section id="about" className="bg-slate-800 text-white p-8 py-16 my-4">
+		<section id="about" className="bg-gray-800/20 text-gray-50 p-8 py-16 my-4">
 			<div className="max-w-3xl mx-auto text-center">
-				<h2 className="text-3xl font-bold mb-8">My Musical Journey</h2>
+				<h2 className="text-4xl font-bold mb-8 text-shadow-2xs">My Musical Journey</h2>
 
 				{/* Personal Story */}
 				<div className="space-y-6 text-lg leading-relaxed">
@@ -18,7 +18,7 @@ const AboutSection = (): React.JSX.Element => {
 					</p>
 
 					{/* Teaching Philosophy */}
-					<div className="bg-slate-700 p-6 rounded-lg mt-6">
+					<div className="bg-[#2845D6]/30 p-6 rounded-lg mt-6">
 						<h3 className="text-xl font-semibold mb-4">Why I Teach</h3>
 						<p>
 							I believe that anyone can learn how to touch an instrument, That's the magic I live

@@ -58,8 +58,8 @@ const Background: React.FC = () => {
 		// gradient.addColorStop(1, '#94B3FD');
 
 		gradient.addColorStop(0, '#EEEEEE');
-		// gradient.addColorStop(0.5, '#6F61C0');
-		gradient.addColorStop(1, '#16213e');
+		gradient.addColorStop(0.5, '#FF5B5B');
+		gradient.addColorStop(1, '#2845D6');
 
 		ctx.fillStyle = gradient;
 		ctx.fillRect(0, 0, width, height);
