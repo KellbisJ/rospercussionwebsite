@@ -42,8 +42,9 @@ const useCanvas = (): UseCanvasReturn => {
 		if (!canvas) return;
 
 		canvas.style.position = 'fixed';
-		canvas.style.width = '100%';
-		canvas.style.height = '100%';
+
+		canvas.style.width = '100vw';
+		canvas.style.height = '100vh';
 		canvas.style.zIndex = '1';
 
 		canvas.width = window.innerWidth;
