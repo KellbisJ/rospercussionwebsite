@@ -1,15 +1,11 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { BgPageImage } from '../../specific/bg-page-image';
 import { ArrowRightIcon } from '@phosphor-icons/react/ssr';
 import { useDisplacementToSection } from '@/hooks/use-displacement-section';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
+import { HeroCarousel } from '@/components/ui/hero-carousel';
 
 const HeroSection = (): React.JSX.Element => {
 	const [servicesSection, setServicesSection] = useState<HTMLElement | null>(null);
-
-	const carouselPlugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
 
 	const { displacementToSection } = useDisplacementToSection();
 
@@ -40,6 +36,7 @@ const HeroSection = (): React.JSX.Element => {
 			horizontal: true,
 		},
 	];
+	const heroImagesSrcs = heroImagesSection.map((imgValue) => imgValue.imgUrl);
 
 	useEffect(() => {
 		const section = document.getElementById('servicesSection');
@@ -51,7 +48,7 @@ const HeroSection = (): React.JSX.Element => {
 			id="heroSection"
 			className="min-h-[80vh] flex items-center px-2 mx-2 py-8 my-8 md:mx-40 md:my-8">
 			<div className="max-w-350 mx-auto w-full">
-				<div className="grid lg:grid-cols-2 gap-12 items-center">
+				<div className="grid xl:grid-cols-2 gap-12 items-center">
 					<div className="space-y-8">
 						<div className="space-y-4">
 							<span className="inline-block px-4 py-2 bg-gray-800 text-gray-50 rounded-lg mb-4">
@@ -81,44 +78,10 @@ const HeroSection = (): React.JSX.Element => {
 									size={20}
 								/>
 							</button>
-							{/* <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-semibold rounded-lg transition-all duration-300">
-                  View Lessons
-                </button> */}
 						</div>
 					</div>
 
-					{/* Image Grid */}
-					{/* <div className="relative">
-						<div className="grid grid-cols-2 gap-4 max-w-md mx-auto lg:max-w-none">
-							{heroImagesSection.map((imgData) => (
-								<div
-									key={imgData.imgUrl}
-									className={`relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 ${
-										imgData.horizontal ? 'col-span-2 aspect-video' : 'aspect-square'
-									}`}>
-									<BgPageImage srcImg={imgData.imgUrl} />
-									<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-								</div>
-							))}
-						</div>
-					</div> */}
-
-					<div className="w-full  flex justify-center rounded-2xl drop-shadow-sm">
-						<Carousel plugins={[carouselPlugin.current]} className="w-full max-w-4xl">
-							<CarouselContent>
-								{heroImagesSection.map((imgData) => (
-									<CarouselItem key={imgData.imgUrl}>
-										<div
-											className={`relative overflow-hidden rounded-2xl transform transition-all duration-500 w-full aspect-video`}>
-											<BgPageImage srcImg={imgData.imgUrl} />
-										</div>
-									</CarouselItem>
-								))}
-							</CarouselContent>
-							{/* <CarouselPrevious />
-							<CarouselNext /> */}
-						</Carousel>
-					</div>
+					<HeroCarousel autoSlide={true} slides={heroImagesSrcs}></HeroCarousel>
 				</div>
 			</div>
 		</section>
