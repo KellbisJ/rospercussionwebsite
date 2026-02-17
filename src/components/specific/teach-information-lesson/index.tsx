@@ -143,7 +143,7 @@ const TeachInformationLesson = ({
 							)}
 						</div>
 
-						<div className="p-6 bg-linear-to-r from-gray-800 to-purple-700">
+						<div className="p-6 bg-linear-to-r from-slate-900 to-purple-900">
 							<h4 className="text-xl font-bold mb-2">Ready to Begin?</h4>
 							<p className=" mb-4">
 								Start your musical transformation with personalized guidance and expert instruction.

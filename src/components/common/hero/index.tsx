@@ -51,7 +51,7 @@ const HeroSection = (): React.JSX.Element => {
 				<div className="grid xl:grid-cols-2 gap-12 items-center">
 					<div className="space-y-8">
 						<div className="space-y-4">
-							<span className="inline-block px-4 py-2 bg-gray-800 text-gray-50 rounded-lg mb-4">
+							<span className="inline-block px-4 py-2 bg-linear-to-r from-gray-800 to-purple-700 text-gray-50 rounded-lg mb-4">
 								Percussionist, Music Educator
 							</span>
 							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-50 text-shadow-2xs leading-tight">
@@ -71,7 +71,7 @@ const HeroSection = (): React.JSX.Element => {
 								onClick={(e) => {
 									displacementToSection(e, servicesSection);
 								}}
-								className="group inline-flex items-center justify-center px-8 py-4 bg-purple-700 hover:bg-purple-800 text-gray-50 rounded-lg transition-all duration-300 transform cursor-pointer">
+								className="group inline-flex items-center justify-center px-8 py-4 bg-gray-800/50 hover:bg-purple-700 text-gray-50 rounded-lg transition-all duration-300 transform cursor-pointer">
 								Start Your Journey
 								<ArrowRightIcon
 									className="ml-2 group-hover:translate-x-1 transition-transform"

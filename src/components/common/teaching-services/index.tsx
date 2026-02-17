@@ -105,7 +105,7 @@ const ServicesSection = (): React.JSX.Element => {
 					{services.map((service) => (
 						<article
 							key={service.title}
-							className="group bg-gray-800 rounded-[10px] p-8 shadow-lg transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col">
+							className="group bg-gray-800/50 rounded-[10px] p-8 shadow-lg transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col">
 							<div className="flex items-center justify-between mb-6">
 								<div className="w-12 h-12 bg-linear-to-br from-[#2845D6] to-purple-700 rounded-xl flex items-center justify-center text-gray-50">
 									{service.icon}
@@ -128,8 +128,8 @@ const ServicesSection = (): React.JSX.Element => {
 							<p className="text-gray-50 leading-relaxed mb-6 grow">{service.description}</p>
 
 							<Link to={`/teach/${service.type}`}>
-								<button className="text-purple-700 font-bold text-sm flex items-center cursor-pointer">
-									Learn more
+								<button className="text-gray-50 hover:text-purple-700 font-bold text-sm flex items-center transition-all duration-300 transform cursor-pointer">
+									{`See ${service.title} Details`}
 									<ArrowRightIcon size={16} className="ml-1" />
 								</button>
 							</Link>
