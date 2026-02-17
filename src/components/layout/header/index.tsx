@@ -9,10 +9,10 @@ const Header = (): React.JSX.Element => {
 	};
 
 	return (
-		<header className="flex justify-between items-center w-full px-4 py-3 sm:px-6 sm:py-4 lg:px-8 sticky top-0 backdrop-blur-sm text-gray-50 bg-gray-800/20">
+		<header className="flex justify-between items-center w-full px-4 py-3 sm:px-6 sm:py-4 lg:px-8 sticky top-0 backdrop-blur-sm text-gray-50 bg-gray-800">
 			<div className="flex">
 				<Link to={'/home'}>
-					<span className="drop-shadow-sm text-xl font-bold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl">
+					<span className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-purple-400">
 						RP
 					</span>
 				</Link>
@@ -24,11 +24,6 @@ const Header = (): React.JSX.Element => {
 					className="drop-shadow-sm text-sm font-medium text-gray-900 transition-colors duration-200 px-2 py-1 sm:px-3 sm:py-2 sm:text-base rounded-md bg-gray-50 border border-transparent hover:border-gray-500 cursor-pointer">
 					About
 				</button>
-				{/* <button
-					onClick={handleAboutClick}
-					className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 px-2 py-1 sm:px-3 sm:py-2 sm:text-base rounded-md hover:bg-gray-50 border border-transparent hover:border-gray-200 cursor-pointer">
-					About
-				</button> */}
 			</nav>
 		</header>
 	);
